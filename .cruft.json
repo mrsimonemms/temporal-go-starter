@@ -1,0 +1,20 @@
+{
+  "template": "https://github.com/mrsimonemms/new",
+  "commit": "6f1459d0cc97b9a3e0fa01a996a7af83fefe02aa",
+  "checkout": "main",
+  "context": {
+    "cookiecutter": {
+      "project_name": "temporal-go-starter",
+      "description": "A starter template for using Temporal with Go",
+      "author": "Simon Emms <simon@simonemms.com>",
+      "repo": "github.com/mrsimonemms/temporal-go-starter",
+      "use_viper": false,
+      "_template": "https://github.com/mrsimonemms/new",
+      "_commit": "6f1459d0cc97b9a3e0fa01a996a7af83fefe02aa"
+    }
+  },
+  "directory": "golang-cobra",
+  "skip": [
+    ".git"
+  ]
+}
