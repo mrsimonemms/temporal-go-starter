@@ -18,12 +18,12 @@ package cmd
 
 import (
 	gh "github.com/mrsimonemms/golang-helpers"
-	"github.com/mrsimonemms/golang-helpers/temporal"
 	"github.com/mrsimonemms/temporal-go-starter/internal/app"
 	"github.com/mrsimonemms/temporal-go-starter/internal/app/activities"
 	"github.com/mrsimonemms/temporal-go-starter/internal/app/workflows"
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/cobra"
+	temporal "github.com/zigflow/helpers"
 	"go.temporal.io/sdk/contrib/sysinfo"
 	"go.temporal.io/sdk/worker"
 )
@@ -77,7 +77,12 @@ func newWorkerCmd() *cobra.Command {
 			w.RegisterActivity(acts)
 
 			log.Debug().Msg("Starting health check server")
-			temporal.NewHealthCheck(cmd.Context(), []string{app.TaskQueue}, opts.temporal.HealthListenAddress, c)
+			if err := temporal.NewHealthCheck(cmd.Context(), []string{app.TaskQueue}, opts.temporal.HealthListenAddress, c); err != nil {
+				return gh.FatalError{
+					Cause: err,
+					Msg:   "Error starting health check",
+				}
+			}
 
 			if err := w.Run(worker.InterruptCh()); err != nil {
 				return gh.FatalError{

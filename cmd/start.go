@@ -21,11 +21,11 @@ import (
 	"fmt"
 
 	gh "github.com/mrsimonemms/golang-helpers"
-	"github.com/mrsimonemms/golang-helpers/temporal"
 	"github.com/mrsimonemms/temporal-go-starter/internal/app"
 	"github.com/mrsimonemms/temporal-go-starter/internal/app/workflows"
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/cobra"
+	temporal "github.com/zigflow/helpers"
 	"go.temporal.io/sdk/client"
 )
 
