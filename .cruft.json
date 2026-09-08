@@ -1,7 +1,7 @@
 {
   "template": "https://github.com/mrsimonemms/new",
-  "commit": "6f1459d0cc97b9a3e0fa01a996a7af83fefe02aa",
-  "checkout": "main",
+  "commit": "6f9d354501373017c05fcf905450cfb9647ff8bf",
+  "checkout": null,
   "context": {
     "cookiecutter": {
       "project_name": "temporal-go-starter",
@@ -10,7 +10,7 @@
       "repo": "github.com/mrsimonemms/temporal-go-starter",
       "use_viper": false,
       "_template": "https://github.com/mrsimonemms/new",
-      "_commit": "6f1459d0cc97b9a3e0fa01a996a7af83fefe02aa"
+      "_commit": "6f9d354501373017c05fcf905450cfb9647ff8bf"
     }
   },
   "directory": "golang-cobra",
