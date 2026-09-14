@@ -10,7 +10,7 @@ require (
 	github.com/spf13/cobra v1.10.2
 	github.com/spf13/viper v1.21.0
 	github.com/stretchr/testify v1.12.1
-	github.com/zigflow/helpers v0.1.0
+	github.com/zigflow/helpers v0.1.1
 	go.temporal.io/sdk v1.48.0
 	go.temporal.io/sdk/contrib/sysinfo v0.1.1
 )
